@@ -25,6 +25,29 @@ const connect = function () {
     conn.write('Name: Zoe');
   })
 
+  //conn.on('connect', () => {
+  //  conn.write('Move: up');
+  //})
+
+
+  conn.on('connect', () => {
+    const moves = ['Move: up', 'Move: right', 'Move: up', 'Move: right'];
+    const myMoves = function (moves) {
+      let timer = 100;  
+    
+      moves.forEach(
+        move => setInterval(() => {
+          console.log(move)
+          conn.write(move);
+        }, timer += 100)
+      );
+    }
+    myMoves(moves)
+  })
+
+  //continuously moving the snack
+
+
 
   return conn;
 };
