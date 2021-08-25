@@ -15,7 +15,15 @@ const connect = function () {
     console.log('Socket timeout message:', data)
   });
 
+  //connect handler
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server')
+  });
 
+  //client sends name to the server
+  conn.on('connect', () => {
+    conn.write('Name: Zoe');
+  })
 
 
   return conn;
