@@ -29,7 +29,7 @@ const connect = function () {
   //  conn.write('Move: up');
   //})
 
-
+/*
   conn.on('connect', () => {
     const moves = ['Move: up', 'Move: right', 'Move: up', 'Move: right'];
     const myMoves = function (moves) {
@@ -44,8 +44,7 @@ const connect = function () {
     }
     myMoves(moves)
   })
-
-  //continuously moving the snack
+*/
 
 
 
@@ -53,10 +52,5 @@ const connect = function () {
 };
 
 console.log("Connecting ...");
-connect();
 
-const myConnection = connect;
-
-module.exports = {
-  myConnection
-};
+module.exports = connect;
