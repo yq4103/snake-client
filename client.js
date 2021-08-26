@@ -25,6 +25,12 @@ const connect = function () {
     conn.write('Name: Zoe');
   })
 
+  conn.on('connect', () => {
+
+      conn.write('Say: YOLO!!!');
+
+  })
+
   //conn.on('connect', () => {
   //  conn.write('Move: up');
   //})
